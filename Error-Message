@@ -1,0 +1,22 @@
+Ignoring exception in command join:
+Traceback (most recent call last):
+  File "C:\{users\user}\AppData\Local\Programs\Python\Python39\lib\site-packages\discord\ext\commands\core.py", line 85, in wrapped
+    ret = await coro(*args, **kwargs)
+  File "c:\{users\user}\Desktop\Hydro Bot\bot.py", line 157, in join
+    await channel.connect()
+  File "C:\{users\user}\AppData\Local\Programs\Python\Python39\lib\site-packages\discord\abc.py", line 1277, in connect
+    voice = cls(client, self)
+  File "C:\{users\user}\AppData\Local\Programs\Python\Python39\lib\site-packages\discord\voice_client.py", line 199, in __init__
+    raise RuntimeError("PyNaCl library needed in order to use voice")
+RuntimeError: PyNaCl library needed in order to use voice
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\{users\user}\AppData\Local\Programs\Python\Python39\lib\site-packages\discord\ext\commands\bot.py", line 939, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\{users\user}\AppData\Local\Programs\Python\Python39\lib\site-packages\discord\ext\commands\core.py", line 863, in invoke
+    await injected(*ctx.args, **ctx.kwargs)
+  File "C:\{users\user}\AppData\Local\Programs\Python\Python39\lib\site-packages\discord\ext\commands\core.py", line 94, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: RuntimeError: PyNaCl library needed in order to use voice
